@@ -16,8 +16,8 @@ def test_multiple_elements():
         assert i.is_displayed()
         #проверяем наличие всех ссылок на экране
 
-    #проверяем первую ссылку, д.б.'1'
     first_i = kol_vo[0]
     assert "1" in first_i.text
+    #проверяем первую ссылку, д.б.'1'
 
     driver.quit()

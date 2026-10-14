@@ -17,5 +17,6 @@ def test_form_submission():
 
     sub_url = driver.current_url
     assert sub_url != second_url
+    #URL результирующий отличается от начального
 
     driver.quit()

@@ -9,7 +9,6 @@ def test_navigation():
     driver.get(first_url)
     driver.maximize_window()
 
-    #driver.find_element(By.CSS_SELECTOR, "[href='/forms/post']").click()
     driver.find_element(By.LINK_TEXT, "HTML Form").click()
 
     assert "/forms/post" in driver.current_url
