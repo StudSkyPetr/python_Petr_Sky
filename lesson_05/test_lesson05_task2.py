@@ -10,12 +10,10 @@ def test_form_submission():
     driver.maximize_window()
 # Ваш код здесь
     driver.find_element(By.NAME, "custname").send_keys("Petr")
-    sleep(2)
 
     sub_button = driver.find_element(
         By.XPATH, "//button[contains(text(),'Submit')]")
     sub_button.click()
-    sleep(2)
 
     sub_url = driver.current_url
     assert sub_url != second_url
