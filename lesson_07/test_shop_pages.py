@@ -20,4 +20,4 @@ def test_shop_pages(driver):
     pages_shop.basket_authorization_string_shop("Петр", "Прохоров", "629603")
 
     pages_shop.result_total()
-    assert pages_shop.result_total() == "Total: $58.29", f"Ожидалось 'Total: $58.29'"
+    assert pages_shop.result_total() == "Total: $58.29", f"Ожидалось  'Total: $58.29'"

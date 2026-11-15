@@ -2,6 +2,7 @@ import pytest
 from selenium import webdriver
 from pages.pages_calculator import PagesCalculator
 
+
 @pytest.fixture
 def driver():
     driver = webdriver.Chrome()

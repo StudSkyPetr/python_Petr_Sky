@@ -58,3 +58,4 @@ class PagesShop:
     def result_total(self):
         total_element = self.wait.until(EC.visibility_of_element_located(self.TOTAL_LABEL))
         return total_element.text
+

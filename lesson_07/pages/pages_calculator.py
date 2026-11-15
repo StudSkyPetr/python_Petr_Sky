@@ -40,3 +40,4 @@ class PagesCalculator:
             EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".screen"), "15"))
         print (end_result)
         return result.text
+
