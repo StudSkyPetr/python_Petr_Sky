@@ -1,5 +1,4 @@
 from tkinter.font import NORMAL
-
 import allure
 import pytest
 from selenium import webdriver

@@ -19,10 +19,12 @@ class PagesCalculator:
         self.wait = WebDriverWait(self.driver, 10)
         self.wait_45 = WebDriverWait(self.driver, 45)
 
+
     @allure.step("Открытие страницы с калькулятором")
     def open_pages(self):
         """Откратие страницы калькулятора"""
         self.driver.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
+
 
     @allure.step("Ввод времени задержки вывода результата на{delay_seconds} секунд")
     def setting_delay (self, delay_seconds:int):
@@ -31,17 +33,20 @@ class PagesCalculator:
         self.driver.find_element(*self.delay_input).clear()
         self.driver.find_element(*self.delay_input).send_keys(delay_seconds)
 
+
     @allure.step("Нажимаем цифровую клавишу {num}")
     def setting_button_num_submit(self, num : int):
         """Ввод цифры нажатием на кнопку калькулятора"""
         button_num_locator = (By.XPATH, f"//span[text()='{num}']")
         self.driver.find_element(*button_num_locator).click()
 
+
     @allure.step("Нажимаем функциональную клавишу {action}")
     def setting_button_action_submit(self, action : str):
         """Ввод нажатием на функциональную кнопку калькулятора"""
         button_action_locator = (By.XPATH, f"//span[text()='{action}']")
         self.driver.find_element(*button_action_locator).click()
+
 
     @allure.step("Ожидание и вывод результата на экран")
     def end_result_screen(self):

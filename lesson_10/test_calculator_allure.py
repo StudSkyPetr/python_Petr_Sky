@@ -25,3 +25,4 @@ def test_calculator(driver):
 
     assert pages_calculator.end_result_screen() == "15",\
         "Результат не равен сумме 7 и 8"
+

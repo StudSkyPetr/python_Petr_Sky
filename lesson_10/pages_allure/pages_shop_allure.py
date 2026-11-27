@@ -39,6 +39,7 @@ class PagesShop:
         #Открывает страницу интернет магазина
         self.driver.get(self.url)
 
+
     @allure.step("Авторизация на странице: ввод логина пароля")
     def authorize_in_shop(self, username : str, password : str):
         """Авторизация на странице (ввод логина и пароля"""
@@ -48,6 +49,7 @@ class PagesShop:
             self.INPUT_PASSWORD)).send_keys(password)
         self.wait.until(EC.element_to_be_clickable(
             self.LOGIN_BUTTON)).click()
+
 
     @allure.step("Добавление товаров в корзину покупателя")
     def add_product_basket(self):
@@ -59,6 +61,7 @@ class PagesShop:
         self.wait.until(EC.element_to_be_clickable(
             self.ADD_ONESIE_BTN)).click()
 
+
     @allure.step("Переход в корзину с товарами")
     def basket_shop(self):
         """Переход в корзину покупателя"""
@@ -66,6 +69,7 @@ class PagesShop:
             self.CART_LINK)).click()
         self.wait.until(EC.element_to_be_clickable(
             self.CHECKOUT_BTN)).click()
+
 
     @allure.step("Авторизация в корзине: данные покупателя")
     def basket_authorization_string_shop(self, first_name : str,
@@ -79,6 +83,7 @@ class PagesShop:
             self.POSTAL_CODE_INPUT)).send_keys(postal_code)
         self.wait.until(EC.element_to_be_clickable(
             self.CONTINUE_BTN)).click()
+
 
     @allure.step("Оценка результата покупки (Total:$58.29)")
     def result_total(self)->str:
